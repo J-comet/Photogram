@@ -9,21 +9,34 @@
 /* Begin PBXBuildFile section */
 		C01F3A7D2A9C1D5D00285822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A7C2A9C1D5D00285822 /* AppDelegate.swift */; };
 		C01F3A7F2A9C1D5D00285822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A7E2A9C1D5D00285822 /* SceneDelegate.swift */; };
-		C01F3A812A9C1D5D00285822 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A802A9C1D5D00285822 /* ViewController.swift */; };
-		C01F3A842A9C1D5D00285822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01F3A822A9C1D5D00285822 /* Main.storyboard */; };
+		C01F3A812A9C1D5D00285822 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A802A9C1D5D00285822 /* AddViewController.swift */; };
 		C01F3A862A9C1D5F00285822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01F3A852A9C1D5F00285822 /* Assets.xcassets */; };
 		C01F3A892A9C1D5F00285822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01F3A872A9C1D5F00285822 /* LaunchScreen.storyboard */; };
+		C01F3A922A9C1E2200285822 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C01F3A912A9C1E2200285822 /* SnapKit */; };
+		C01F3A952A9C242400285822 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A942A9C242400285822 /* BaseViewController.swift */; };
+		C01F3A982A9C274F00285822 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A972A9C274F00285822 /* SearchViewController.swift */; };
+		C01F3A9A2A9C2EB600285822 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A992A9C2EB600285822 /* BaseView.swift */; };
+		C01F3A9D2A9C2FF400285822 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A9C2A9C2FF400285822 /* AddView.swift */; };
+		C01F3A9F2A9C337800285822 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A9E2A9C337800285822 /* SearchView.swift */; };
+		C01F3AA12A9C366B00285822 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AA02A9C366B00285822 /* BaseCollectionViewCell.swift */; };
+		C01F3AA32A9C37F600285822 /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AA22A9C37F600285822 /* SearchCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C01F3A792A9C1D5D00285822 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01F3A7C2A9C1D5D00285822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01F3A7E2A9C1D5D00285822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C01F3A802A9C1D5D00285822 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C01F3A832A9C1D5D00285822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C01F3A802A9C1D5D00285822 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		C01F3A852A9C1D5F00285822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C01F3A882A9C1D5F00285822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01F3A8A2A9C1D5F00285822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01F3A942A9C242400285822 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C01F3A972A9C274F00285822 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C01F3A992A9C2EB600285822 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		C01F3A9C2A9C2FF400285822 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		C01F3A9E2A9C337800285822 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C01F3AA02A9C366B00285822 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C01F3AA22A9C37F600285822 /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01F3A922A9C1E2200285822 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,45 @@
 		C01F3A7B2A9C1D5D00285822 /* Photogram */ = {
 			isa = PBXGroup;
 			children = (
+				C01F3A9B2A9C2FC200285822 /* Add */,
+				C01F3A962A9C272C00285822 /* Search */,
+				C01F3A932A9C23E800285822 /* Base */,
 				C01F3A7C2A9C1D5D00285822 /* AppDelegate.swift */,
 				C01F3A7E2A9C1D5D00285822 /* SceneDelegate.swift */,
-				C01F3A802A9C1D5D00285822 /* ViewController.swift */,
-				C01F3A822A9C1D5D00285822 /* Main.storyboard */,
 				C01F3A852A9C1D5F00285822 /* Assets.xcassets */,
 				C01F3A872A9C1D5F00285822 /* LaunchScreen.storyboard */,
 				C01F3A8A2A9C1D5F00285822 /* Info.plist */,
 			);
 			path = Photogram;
+			sourceTree = "<group>";
+		};
+		C01F3A932A9C23E800285822 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3A942A9C242400285822 /* BaseViewController.swift */,
+				C01F3A992A9C2EB600285822 /* BaseView.swift */,
+				C01F3AA02A9C366B00285822 /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C01F3A962A9C272C00285822 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3A972A9C274F00285822 /* SearchViewController.swift */,
+				C01F3A9E2A9C337800285822 /* SearchView.swift */,
+				C01F3AA22A9C37F600285822 /* SearchCollectionCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C01F3A9B2A9C2FC200285822 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3A802A9C1D5D00285822 /* AddViewController.swift */,
+				C01F3A9C2A9C2FF400285822 /* AddView.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +127,9 @@
 			dependencies = (
 			);
 			name = Photogram;
+			packageProductDependencies = (
+				C01F3A912A9C1E2200285822 /* SnapKit */,
+			);
 			productName = Photogram;
 			productReference = C01F3A792A9C1D5D00285822 /* Photogram.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +158,9 @@
 				Base,
 			);
 			mainGroup = C01F3A702A9C1D5D00285822;
+			packageReferences = (
+				C01F3A902A9C1E2200285822 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C01F3A7A2A9C1D5D00285822 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +177,6 @@
 			files = (
 				C01F3A892A9C1D5F00285822 /* LaunchScreen.storyboard in Resources */,
 				C01F3A862A9C1D5F00285822 /* Assets.xcassets in Resources */,
-				C01F3A842A9C1D5D00285822 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +187,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01F3A812A9C1D5D00285822 /* ViewController.swift in Sources */,
+				C01F3A9D2A9C2FF400285822 /* AddView.swift in Sources */,
+				C01F3A982A9C274F00285822 /* SearchViewController.swift in Sources */,
+				C01F3AA12A9C366B00285822 /* BaseCollectionViewCell.swift in Sources */,
+				C01F3A812A9C1D5D00285822 /* AddViewController.swift in Sources */,
+				C01F3A952A9C242400285822 /* BaseViewController.swift in Sources */,
+				C01F3A9F2A9C337800285822 /* SearchView.swift in Sources */,
+				C01F3A9A2A9C2EB600285822 /* BaseView.swift in Sources */,
 				C01F3A7D2A9C1D5D00285822 /* AppDelegate.swift in Sources */,
 				C01F3A7F2A9C1D5D00285822 /* SceneDelegate.swift in Sources */,
+				C01F3AA32A9C37F600285822 /* SearchCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C01F3A822A9C1D5D00285822 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C01F3A832A9C1D5D00285822 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C01F3A872A9C1D5F00285822 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +340,6 @@
 				INFOPLIST_FILE = Photogram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +367,6 @@
 				INFOPLIST_FILE = Photogram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +404,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C01F3A902A9C1E2200285822 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C01F3A912A9C1E2200285822 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C01F3A902A9C1E2200285822 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C01F3A712A9C1D5D00285822 /* Project object */;
 }
