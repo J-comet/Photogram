@@ -6,6 +6,17 @@
 //
 
 import UIKit
+import SesacFrameWork
+
+// protocol  = ? , delegate = ?
+// 1. Protocol 값 전달
+protocol PassDateDelegate {
+    func receiveDate(date: Date)
+}
+
+protocol PassImageDelegate {
+    func receiveImage(image: String)
+}
 
 class AddViewController: BaseViewController {
 
@@ -19,20 +30,74 @@ class AddViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ClassOpenExample.publicExample()
+        ClassPublicExample.publicExample()
+//        ClassPublicExample.internalExample()      // 오류
+        
+        mainView.dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+        mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonClicked), for: .touchUpInside)
+        mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
+        mainView.contentButton.addTarget(self, action: #selector(contentButtonClicked), for: .touchUpInside)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         // SearchViewController 에서 선택한 이미지 값 받기
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(selectImageNotificationObserver),
-            name: NSNotification.Name("SelectImage"),
+            name: .selectImage,
             object: nil
         )
+        
+//        sesacShowActivityViewController(image: UIImage(systemName: "star")!, url: "aaa", text: "sddsds")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 옵저버 remove 시키기
+        NotificationCenter.default.removeObserver(self, name: .selectImage, object: nil)
+    }
+    
+    @objc func contentButtonClicked() {
+        let vc = ContentViewController()
+        vc.completionHandler = { content in
+            print(content)
+            self.mainView.contentButton.setTitle(content, for: .normal)
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func titleButtonClicked() {
+        let vc = TitleViewController()
+        
+        // 3. 클로저 값 전달
+        vc.completionHandler = { title, age, alarmStatus in
+            print(title, age, alarmStatus," ",#function)
+            self.mainView.titleButton.setTitle(title, for: .normal)
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func searchProtocolButtonClicked() {
+        let vc = SearchViewController()
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    
+    @objc func dateButtonClicked() {
+        // 5. Protocol 값 전달
+        let vc = DatePickerViewController()
+        vc.delegate = self
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // 이미지 전달받았을 때 처리할 메서드
     @objc func selectImageNotificationObserver(notification: NSNotification) {
-        print("이미지 전달 받음")
-        print(notification.userInfo?["name"])
-        print(notification.userInfo?["sample"])
+        print(#function, "이미지 전달 받음")
+//        print(notification.userInfo?["name"])
+//        print(notification.userInfo?["sample"])
         
         if let name = notification.userInfo?["name"] as? String {
             mainView.photoImageView.image = UIImage(systemName: name)
@@ -44,13 +109,15 @@ class AddViewController: BaseViewController {
         
         let word = ["Apple","Banana","Cookie","Cake","Sky"]
         
-        // 노티피케이션으로 값 전달
+        // 노티피케이션으로 값 전달 실패 = SearchViewController 의 addObserver 가 post 보다 늦게 실행됨.
         NotificationCenter.default.post(
-            name: NSNotification.Name("RecommandKeyword"),
+            name: .recommendKeyword,
             object: nil,
             userInfo: ["word":word.randomElement()!]
         )
-        present(SearchViewController(), animated: true)
+        
+        navigationController?.pushViewController(SearchViewController(), animated: true)
+//        present(SearchViewController(), animated: true)
     }
 
     override func configureView() {
@@ -59,5 +126,18 @@ class AddViewController: BaseViewController {
         mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
     }
 
+}
+
+// 4. Protocol 값 전달
+extension AddViewController: PassDateDelegate {
+    func receiveDate(date: Date) {
+        mainView.dateButton.setTitle(DateFormatter.convertDate(date: date), for: .normal)
+    }
+}
+
+extension AddViewController: PassImageDelegate {
+    func receiveImage(image: String) {
+        mainView.photoImageView.image = UIImage(systemName: image)
+    }
 }
 

@@ -13,6 +13,8 @@ class SearchViewController: BaseViewController {
     
     let imageList = ["pencil", "star", "person", "star.fill", "xmark", "person.circle"]
     
+    var delegate: PassImageDelegate?
+    
     override func loadView() {
         self.view = mainView
     }
@@ -24,7 +26,7 @@ class SearchViewController: BaseViewController {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(recommandKeywordNotificationObserver(notification: )),
-            name: NSNotification.Name("RecommandKeyword"),
+            name: .recommendKeyword,
             object: nil
         )
     }
@@ -57,11 +59,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // 노티피케이션으로 값 전달
-        NotificationCenter.default.post(
-            name: NSNotification.Name("SelectImage"),
-            object: nil,
-            userInfo: ["name": imageList[indexPath.row], "sample":"밥밥밥"]
-        )
+//        NotificationCenter.default.post(
+//            name: .selectImage,
+//            object: nil,
+//            userInfo: ["name": imageList[indexPath.row], "sample":"밥밥밥"]
+//        )
+        
+        // protocol 값 전달
+        delegate?.receiveImage(image: imageList[indexPath.row])
         
         dismiss(animated: true) {
             print("종료")

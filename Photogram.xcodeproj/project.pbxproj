@@ -20,7 +20,47 @@
 		C01F3A9F2A9C337800285822 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3A9E2A9C337800285822 /* SearchView.swift */; };
 		C01F3AA12A9C366B00285822 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AA02A9C366B00285822 /* BaseCollectionViewCell.swift */; };
 		C01F3AA32A9C37F600285822 /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AA22A9C37F600285822 /* SearchCollectionCell.swift */; };
+		C01F3ABE2A9D7BD400285822 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3ABD2A9D7BD400285822 /* Notification+Extension.swift */; };
+		C01F3AC02A9D7C7500285822 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3ABF2A9D7C7500285822 /* DateView.swift */; };
+		C01F3AC22A9D7DCA00285822 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AC12A9D7DCA00285822 /* DatePickerViewController.swift */; };
+		C01F3AC42A9D8E8A00285822 /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AC32A9D8E8A00285822 /* DateFormat+Extension.swift */; };
+		C01F3AF72A9D9BBB00285822 /* SesacFrameWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C01F3AF32A9D9B3B00285822 /* SesacFrameWork.framework */; };
+		C01F3AF82A9D9BBB00285822 /* SesacFrameWork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C01F3AF32A9D9B3B00285822 /* SesacFrameWork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C01F3AFB2A9DB55200285822 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AFA2A9DB55200285822 /* TitleViewController.swift */; };
+		C01F3AFD2A9DBB2100285822 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AFC2A9DBB2100285822 /* ContentViewController.swift */; };
+		C01F3AFF2A9DC76200285822 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3AFE2A9DC76200285822 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C01F3AF22A9D9B3B00285822 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C01F3AED2A9D9B3B00285822 /* SesacFrameWork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C01F3ACF2A9D92B200285822;
+			remoteInfo = SesacFrameWork;
+		};
+		C01F3AF42A9D9B3B00285822 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C01F3AED2A9D9B3B00285822 /* SesacFrameWork.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C01F3AD92A9D92B200285822;
+			remoteInfo = SesacFrameWorkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C01F3AF92A9D9BBB00285822 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C01F3AF82A9D9BBB00285822 /* SesacFrameWork.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C01F3A792A9C1D5D00285822 /* Photogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +77,14 @@
 		C01F3A9E2A9C337800285822 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C01F3AA02A9C366B00285822 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		C01F3AA22A9C37F600285822 /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
+		C01F3ABD2A9D7BD400285822 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		C01F3ABF2A9D7C7500285822 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		C01F3AC12A9D7DCA00285822 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		C01F3AC32A9D8E8A00285822 /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
+		C01F3AED2A9D9B3B00285822 /* SesacFrameWork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SesacFrameWork.xcodeproj; path = ../SesacFrameWork/SesacFrameWork.xcodeproj; sourceTree = "<group>"; };
+		C01F3AFA2A9DB55200285822 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		C01F3AFC2A9DBB2100285822 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		C01F3AFE2A9DC76200285822 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01F3A922A9C1E2200285822 /* SnapKit in Frameworks */,
+				C01F3AF72A9D9BBB00285822 /* SesacFrameWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,8 +103,10 @@
 		C01F3A702A9C1D5D00285822 = {
 			isa = PBXGroup;
 			children = (
+				C01F3AED2A9D9B3B00285822 /* SesacFrameWork.xcodeproj */,
 				C01F3A7B2A9C1D5D00285822 /* Photogram */,
 				C01F3A7A2A9C1D5D00285822 /* Products */,
+				C01F3AF62A9D9BBB00285822 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +121,7 @@
 		C01F3A7B2A9C1D5D00285822 /* Photogram */ = {
 			isa = PBXGroup;
 			children = (
+				C01F3ABC2A9D7BAF00285822 /* Extension */,
 				C01F3A9B2A9C2FC200285822 /* Add */,
 				C01F3A962A9C272C00285822 /* Search */,
 				C01F3A932A9C23E800285822 /* Base */,
@@ -78,6 +130,7 @@
 				C01F3A852A9C1D5F00285822 /* Assets.xcassets */,
 				C01F3A872A9C1D5F00285822 /* LaunchScreen.storyboard */,
 				C01F3A8A2A9C1D5F00285822 /* Info.plist */,
+				C01F3AFE2A9DC76200285822 /* WebViewController.swift */,
 			);
 			path = Photogram;
 			sourceTree = "<group>";
@@ -107,8 +160,37 @@
 			children = (
 				C01F3A802A9C1D5D00285822 /* AddViewController.swift */,
 				C01F3A9C2A9C2FF400285822 /* AddView.swift */,
+				C01F3ABF2A9D7C7500285822 /* DateView.swift */,
+				C01F3AC12A9D7DCA00285822 /* DatePickerViewController.swift */,
+				C01F3AFA2A9DB55200285822 /* TitleViewController.swift */,
+				C01F3AFC2A9DBB2100285822 /* ContentViewController.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		C01F3ABC2A9D7BAF00285822 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3ABD2A9D7BD400285822 /* Notification+Extension.swift */,
+				C01F3AC32A9D8E8A00285822 /* DateFormat+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C01F3AEE2A9D9B3B00285822 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3AF32A9D9B3B00285822 /* SesacFrameWork.framework */,
+				C01F3AF52A9D9B3B00285822 /* SesacFrameWorkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C01F3AF62A9D9BBB00285822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +203,7 @@
 				C01F3A752A9C1D5D00285822 /* Sources */,
 				C01F3A762A9C1D5D00285822 /* Frameworks */,
 				C01F3A772A9C1D5D00285822 /* Resources */,
+				C01F3AF92A9D9BBB00285822 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,12 +246,35 @@
 			);
 			productRefGroup = C01F3A7A2A9C1D5D00285822 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C01F3AEE2A9D9B3B00285822 /* Products */;
+					ProjectRef = C01F3AED2A9D9B3B00285822 /* SesacFrameWork.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C01F3A782A9C1D5D00285822 /* Photogram */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C01F3AF32A9D9B3B00285822 /* SesacFrameWork.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SesacFrameWork.framework;
+			remoteRef = C01F3AF22A9D9B3B00285822 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C01F3AF52A9D9B3B00285822 /* SesacFrameWorkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SesacFrameWorkTests.xctest;
+			remoteRef = C01F3AF42A9D9B3B00285822 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C01F3A772A9C1D5D00285822 /* Resources */ = {
@@ -187,16 +293,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01F3AFD2A9DBB2100285822 /* ContentViewController.swift in Sources */,
+				C01F3ABE2A9D7BD400285822 /* Notification+Extension.swift in Sources */,
+				C01F3AC22A9D7DCA00285822 /* DatePickerViewController.swift in Sources */,
 				C01F3A9D2A9C2FF400285822 /* AddView.swift in Sources */,
 				C01F3A982A9C274F00285822 /* SearchViewController.swift in Sources */,
+				C01F3AC42A9D8E8A00285822 /* DateFormat+Extension.swift in Sources */,
 				C01F3AA12A9C366B00285822 /* BaseCollectionViewCell.swift in Sources */,
 				C01F3A812A9C1D5D00285822 /* AddViewController.swift in Sources */,
 				C01F3A952A9C242400285822 /* BaseViewController.swift in Sources */,
+				C01F3AC02A9D7C7500285822 /* DateView.swift in Sources */,
 				C01F3A9F2A9C337800285822 /* SearchView.swift in Sources */,
 				C01F3A9A2A9C2EB600285822 /* BaseView.swift in Sources */,
+				C01F3AFF2A9DC76200285822 /* WebViewController.swift in Sources */,
 				C01F3A7D2A9C1D5D00285822 /* AppDelegate.swift in Sources */,
 				C01F3A7F2A9C1D5D00285822 /* SceneDelegate.swift in Sources */,
 				C01F3AA32A9C37F600285822 /* SearchCollectionCell.swift in Sources */,
+				C01F3AFB2A9DB55200285822 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
