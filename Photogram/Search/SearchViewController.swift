@@ -29,6 +29,10 @@ class SearchViewController: BaseViewController {
             name: .recommendKeyword,
             object: nil
         )
+        
+        // 첫번째로 반응할 수 있게 => 바로 소프트키보드가 올라옴
+        mainView.searchBar.becomeFirstResponder()
+        mainView.searchBar.delegate = self
     }
     
     @objc
@@ -42,6 +46,14 @@ class SearchViewController: BaseViewController {
         mainView.collectionView.dataSource = self
     }
 
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        // 소프트키보드 내리기
+        mainView.searchBar.resignFirstResponder()
+    }
 }
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {

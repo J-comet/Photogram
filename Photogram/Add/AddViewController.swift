@@ -38,6 +38,8 @@ class AddViewController: BaseViewController {
         mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonClicked), for: .touchUpInside)
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         mainView.contentButton.addTarget(self, action: #selector(contentButtonClicked), for: .touchUpInside)
+        
+        APIService.shared.callRequest()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -124,6 +126,8 @@ class AddViewController: BaseViewController {
         super.configureView()
         print(self, #function)
         mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
+        
+        APIService.shared.callRequest()
     }
 
 }
