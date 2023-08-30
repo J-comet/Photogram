@@ -53,6 +53,22 @@ class AddViewController: BaseViewController {
         mainView.contentButton.addTarget(self, action: #selector(contentButtonClicked), for: .touchUpInside)
         
         //        APIService.shared.callRequest()
+        
+        UnSplashAPIService.shared.call(
+            responseData: UnSplashSearchImage.self,
+            parameterDic: [
+                "query": "sky",
+                "page": "\(1)",
+                "per_page": 1
+            ]
+        ) { response in
+            print(response)
+        } failure: { error in
+            print(error)
+        } end: { endUrl in
+            print(endUrl)
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -147,7 +163,6 @@ class AddViewController: BaseViewController {
                 return
             }
             self.present(self.phpicker, animated: true)
-        
         }))
         
         actionSheet.addAction(UIAlertAction(title: "웹에서 가져오기", style: .default, handler: { UIAlertAction in
