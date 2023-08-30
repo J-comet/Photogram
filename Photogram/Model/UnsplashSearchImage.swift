@@ -15,7 +15,7 @@ import Foundation
 // MARK: - UnSplashSearchImage
 struct UnSplashSearchImage: Codable {
     let total, totalPages: Int
-    let results: [Result]
+    let results: [UnSplashSearchImageResult]
 
     enum CodingKeys: String, CodingKey {
         case total
@@ -25,18 +25,21 @@ struct UnSplashSearchImage: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct UnSplashSearchImageResult: Codable {
     let id, slug: String
-    let createdAt, updatedAt, promotedAt: String
+    let createdAt, updatedAt: String
+    let promotedAt: String?
     let width, height: Int
-    let color, blurHash, description, altDescription: String
+    let color, blurHash: String
+    let description: String?
+    let altDescription: String
     let breadcrumbs: [JSONAny]
     let urls: Urls
     let links: ResultLinks
     let likes: Int
     let likedByUser: Bool
     let currentUserCollections: [JSONAny]
-    let sponsorship: Sponsorship
+    let sponsorship: Sponsorship?
     let topicSubmissions: ResultTopicSubmissions
     let user: User
     let tags: [Tag]
@@ -91,11 +94,11 @@ struct User: Codable {
     let updatedAt: String
     let username, name, firstName: String
     let lastName, twitterUsername: String?
-    let portfolioURL: String
-    let bio, location: String
+    let portfolioURL: String?
+    let bio, location: String?
     let links: UserLinks
     let profileImage: ProfileImage
-    let instagramUsername: String
+    let instagramUsername: String?
     let totalCollections, totalLikes, totalPhotos: Int
     let acceptedTos, forHire: Bool
     let social: Social
@@ -138,8 +141,8 @@ struct ProfileImage: Codable {
 
 // MARK: - Social
 struct Social: Codable {
-    let instagramUsername: String
-    let portfolioURL: String
+    let instagramUsername: String?
+    let portfolioURL: String?
     let twitterUsername: String?
     let paypalEmail: JSONNull?
 
@@ -153,7 +156,8 @@ struct Social: Codable {
 
 // MARK: - Tag
 struct Tag: Codable {
-    let type, title: String
+    let type: TypeEnum
+    let title: String
     let source: Source?
 }
 
@@ -174,11 +178,12 @@ struct Source: Codable {
 
 // MARK: - Ancestry
 struct Ancestry: Codable {
-    let type: TypeClass
+    let type: Category
+    let category, subcategory: Category?
 }
 
-// MARK: - TypeClass
-struct TypeClass: Codable {
+// MARK: - Category
+struct Category: Codable {
     let slug, prettySlug: String
 
     enum CodingKeys: String, CodingKey {
@@ -190,10 +195,13 @@ struct TypeClass: Codable {
 // MARK: - CoverPhoto
 struct CoverPhoto: Codable {
     let id, slug: String
-    let createdAt, updatedAt, promotedAt: String
+    let createdAt, updatedAt: String
+    let promotedAt: String?
     let width, height: Int
-    let color, blurHash, description, altDescription: String
-    let breadcrumbs: [JSONAny]
+    let color, blurHash: String
+    let description: String?
+    let altDescription: String
+    let breadcrumbs: [Breadcrumb]
     let urls: Urls
     let links: ResultLinks
     let likes: Int
@@ -222,26 +230,45 @@ struct CoverPhoto: Codable {
     }
 }
 
+// MARK: - Breadcrumb
+struct Breadcrumb: Codable {
+    let slug, title: String
+    let index: Int
+    let type: TypeEnum
+}
+
+enum TypeEnum: String, Codable {
+    case landingPage = "landing_page"
+    case search = "search"
+}
+
 // MARK: - CoverPhotoTopicSubmissions
 struct CoverPhotoTopicSubmissions: Codable {
-    let architectureInterior, colorOfWater, wallpapers: ArchitectureInterior
+    let architectureInterior, colorOfWater, wallpapers, texturesPatterns: Nature?
+    let nature, spirituality, experimental: Nature?
 
     enum CodingKeys: String, CodingKey {
         case architectureInterior = "architecture-interior"
         case colorOfWater = "color-of-water"
         case wallpapers
+        case texturesPatterns = "textures-patterns"
+        case nature, spirituality, experimental
     }
 }
 
-// MARK: - ArchitectureInterior
-struct ArchitectureInterior: Codable {
-    let status: String
+// MARK: - Nature
+struct Nature: Codable {
+    let status: Status
     let approvedOn: String
 
     enum CodingKeys: String, CodingKey {
         case status
         case approvedOn = "approved_on"
     }
+}
+
+enum Status: String, Codable {
+    case approved = "approved"
 }
 
 // MARK: - Urls
@@ -257,6 +284,7 @@ struct Urls: Codable {
 
 // MARK: - ResultTopicSubmissions
 struct ResultTopicSubmissions: Codable {
+    let wallpapers, nature: Nature?
 }
 
 // MARK: - Encode/decode helpers

@@ -36,6 +36,8 @@
 		C01F3BA12A9F16E500285822 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C01F3BA02A9F16E500285822 /* .gitignore */; };
 		C01F3BA32A9F171200285822 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BA22A9F171200285822 /* APIKey.swift */; };
 		C01F3BA62A9F1B3B00285822 /* UnsplashSearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BA52A9F1B3B00285822 /* UnsplashSearchImage.swift */; };
+		C01F3BAE2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BAD2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift */; };
+		C01F3BB32A9F285100285822 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C01F3BB22A9F285100285822 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,7 @@
 		C01F3BA02A9F16E500285822 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C01F3BA22A9F171200285822 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C01F3BA52A9F1B3B00285822 /* UnsplashSearchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashSearchImage.swift; sourceTree = "<group>"; };
+		C01F3BAD2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01F3BB32A9F285100285822 /* Kingfisher in Frameworks */,
 				C01F3B9C2A9F15F600285822 /* Alamofire in Frameworks */,
 				C01F3A922A9C1E2200285822 /* SnapKit in Frameworks */,
 				C01F3AF72A9D9BBB00285822 /* SesacFrameWork.framework in Frameworks */,
@@ -190,6 +194,7 @@
 			children = (
 				C01F3ABD2A9D7BD400285822 /* Notification+Extension.swift */,
 				C01F3AC32A9D8E8A00285822 /* DateFormat+Extension.swift */,
+				C01F3BAD2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			packageProductDependencies = (
 				C01F3A912A9C1E2200285822 /* SnapKit */,
 				C01F3B9B2A9F15F600285822 /* Alamofire */,
+				C01F3BB22A9F285100285822 /* Kingfisher */,
 			);
 			productName = Photogram;
 			productReference = C01F3A792A9C1D5D00285822 /* Photogram.app */;
@@ -281,6 +287,7 @@
 			packageReferences = (
 				C01F3A902A9C1E2200285822 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				C01F3B9A2A9F15F600285822 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C01F3BB12A9F285100285822 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C01F3A7A2A9C1D5D00285822 /* Products */;
 			projectDirPath = "";
@@ -337,6 +344,7 @@
 				C01F3BA32A9F171200285822 /* APIKey.swift in Sources */,
 				C01F3ABE2A9D7BD400285822 /* Notification+Extension.swift in Sources */,
 				C01F3AC22A9D7DCA00285822 /* DatePickerViewController.swift in Sources */,
+				C01F3BAE2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift in Sources */,
 				C01F3A9D2A9C2FF400285822 /* AddView.swift in Sources */,
 				C01F3B992A9F156200285822 /* UnSplashAPIService.swift in Sources */,
 				C01F3A982A9C274F00285822 /* SearchViewController.swift in Sources */,
@@ -579,6 +587,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		C01F3BB12A9F285100285822 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -591,6 +607,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C01F3B9A2A9F15F600285822 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C01F3BB22A9F285100285822 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C01F3BB12A9F285100285822 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

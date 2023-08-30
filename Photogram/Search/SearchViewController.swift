@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SearchViewController: BaseViewController {
 
     let mainView = SearchView()
     
-    let imageList = ["pencil", "star", "person", "star.fill", "xmark", "person.circle"]
+    let systemImages = ["pencil", "star", "person", "star.fill", "xmark", "person.circle"]
+    
+    var images: [UnSplashSearchImageResult] = []
     
     var delegate: PassImageDelegate?
     
@@ -44,6 +47,23 @@ class SearchViewController: BaseViewController {
         super.configureView()
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
+        
+        UnSplashAPIService.shared.call(
+            responseData: UnSplashSearchImage.self,
+            parameterDic: [
+                "query": "sky",
+                "page": "\(1)",
+                "per_page": 20
+            ]
+        ) { response in
+            print(response)
+            self.images = response.results
+            self.mainView.collectionView.reloadData()
+        } failure: { error in
+            print(error)
+        } end: { endUrl in
+            print(endUrl)
+        }
     }
 
 }
@@ -59,12 +79,16 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList.count
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchCollectionCell", for: indexPath) as? SearchCollectionCell else { return UICollectionViewCell() }
-        cell.thumbImageView.image = UIImage(systemName: imageList[indexPath.row])
+        
+        if let url = URL(string: images[indexPath.row].urls.thumb) {
+            cell.thumbImageView.kf.setImage(with: url)
+        }
+//        cell.thumbImageView.image = UIImage(systemName: systemImages[indexPath.row])
         return cell
     }
         
@@ -74,11 +98,13 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
 //        NotificationCenter.default.post(
 //            name: .selectImage,
 //            object: nil,
-//            userInfo: ["name": imageList[indexPath.row], "sample":"밥밥밥"]
+//            userInfo: ["name": systemImages[indexPath.row], "sample":"밥밥밥"]
 //        )
         
         // protocol 값 전달
-        delegate?.receiveImage(image: imageList[indexPath.row])
+//        delegate?.receiveImage(image: systemImages[indexPath.row])
+        delegate?.receiveImage(image: images[indexPath.row].urls.thumb)
+        
         
         dismiss(animated: true) {
             print("종료")
