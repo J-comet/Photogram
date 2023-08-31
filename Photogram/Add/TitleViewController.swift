@@ -47,6 +47,10 @@ class TitleViewController: BaseViewController {
         super.viewDidLoad()
     }
     
+    deinit {
+        print("deinit", self)
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // 2. 클로저 값 전달

@@ -23,4 +23,8 @@ class BaseViewController: UIViewController {
     func setConstraints() {     // 제약조건
         print("Base setConstraints")
     }
+    
+    deinit {
+        print(self, "/ [deinit]")
+    }
 }

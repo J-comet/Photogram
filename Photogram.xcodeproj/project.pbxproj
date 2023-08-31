@@ -38,6 +38,8 @@
 		C01F3BA62A9F1B3B00285822 /* UnsplashSearchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BA52A9F1B3B00285822 /* UnsplashSearchImage.swift */; };
 		C01F3BAE2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BAD2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift */; };
 		C01F3BB32A9F285100285822 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C01F3BB22A9F285100285822 /* Kingfisher */; };
+		C01F3BB92AA01A7800285822 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BB82AA01A7800285822 /* HomeViewController.swift */; };
+		C01F3BBB2AA01A8C00285822 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F3BBA2AA01A8C00285822 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		C01F3BA22A9F171200285822 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C01F3BA52A9F1B3B00285822 /* UnsplashSearchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashSearchImage.swift; sourceTree = "<group>"; };
 		C01F3BAD2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Extension.swift"; sourceTree = "<group>"; };
+		C01F3BB82AA01A7800285822 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C01F3BBA2AA01A8C00285822 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 		C01F3A7B2A9C1D5D00285822 /* Photogram */ = {
 			isa = PBXGroup;
 			children = (
+				C01F3BB72AA01A5700285822 /* Home */,
 				C01F3BA42A9F1B2B00285822 /* Model */,
 				C01F3B932A9EC72300285822 /* Network */,
 				C01F3ABC2A9D7BAF00285822 /* Extension */,
@@ -232,6 +237,15 @@
 				C01F3BA52A9F1B3B00285822 /* UnsplashSearchImage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C01F3BB72AA01A5700285822 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3BB82AA01A7800285822 /* HomeViewController.swift */,
+				C01F3BBA2AA01A8C00285822 /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +356,7 @@
 				C01F3AFD2A9DBB2100285822 /* ContentViewController.swift in Sources */,
 				C01F3BA62A9F1B3B00285822 /* UnsplashSearchImage.swift in Sources */,
 				C01F3BA32A9F171200285822 /* APIKey.swift in Sources */,
+				C01F3BBB2AA01A8C00285822 /* HomeView.swift in Sources */,
 				C01F3ABE2A9D7BD400285822 /* Notification+Extension.swift in Sources */,
 				C01F3AC22A9D7DCA00285822 /* DatePickerViewController.swift in Sources */,
 				C01F3BAE2A9F258300285822 /* UICollectionViewFlowLayout+Extension.swift in Sources */,
@@ -350,6 +365,7 @@
 				C01F3A982A9C274F00285822 /* SearchViewController.swift in Sources */,
 				C01F3AC42A9D8E8A00285822 /* DateFormat+Extension.swift in Sources */,
 				C01F3AA12A9C366B00285822 /* BaseCollectionViewCell.swift in Sources */,
+				C01F3BB92AA01A7800285822 /* HomeViewController.swift in Sources */,
 				C01F3A812A9C1D5D00285822 /* AddViewController.swift in Sources */,
 				C01F3A952A9C242400285822 /* BaseViewController.swift in Sources */,
 				C01F3AC02A9D7C7500285822 /* DateView.swift in Sources */,

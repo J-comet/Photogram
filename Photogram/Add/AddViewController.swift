@@ -47,12 +47,21 @@ class AddViewController: BaseViewController {
         ClassPublicExample.publicExample()
         //        ClassPublicExample.internalExample()      // 오류
         
-        mainView.dateButton.addTarget(self, action: #selector(dateButtonClicked), for: .touchUpInside)
+        mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
+        mainView.dateButton.addTarget(
+            self,
+            action: #selector(dateButtonClicked),
+            for: .touchUpInside
+        )
         mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonClicked), for: .touchUpInside)
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         mainView.contentButton.addTarget(self, action: #selector(contentButtonClicked), for: .touchUpInside)
         
         //        APIService.shared.callRequest()
+    }
+    
+    deinit {
+        print("deinit", self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -103,8 +112,11 @@ class AddViewController: BaseViewController {
     
     @objc func dateButtonClicked() {
         // 5. Protocol 값 전달
-        let vc = DatePickerViewController()
-        vc.delegate = self
+//        let vc = DatePickerViewController()
+//        vc.delegate = self
+//        navigationController?.pushViewController(vc, animated: true)
+        
+        let vc = HomeViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -136,7 +148,7 @@ class AddViewController: BaseViewController {
     override func configureView() {
         super.configureView()
         print(self, #function)
-        mainView.searchButton.addTarget(self, action: #selector(searchButtonClicked), for: .touchUpInside)
+        
     }
     
     private func showActionSheet() {

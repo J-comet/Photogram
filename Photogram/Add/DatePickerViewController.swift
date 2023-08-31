@@ -28,5 +28,9 @@ class DatePickerViewController: BaseViewController {
         super.viewDidLoad()
         
     }
+    
+    deinit {
+        print("deinit", self)
+    }
 
 }
