@@ -25,6 +25,6 @@ class BaseViewController: UIViewController {
     }
     
     deinit {
-        print(self, "/ [deinit]")
+        print("[",String(describing: type(of: self)), "] / [deinit]")
     }
 }

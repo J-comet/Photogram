@@ -15,7 +15,7 @@ protocol PassDateDelegate {
     func receiveDate(date: Date)
 }
 
-protocol PassImageDelegate {
+protocol PassImageDelegate: AnyObject {
     func receiveImage(image: String)
 }
 
@@ -59,10 +59,7 @@ class AddViewController: BaseViewController {
         
         //        APIService.shared.callRequest()
     }
-    
-    deinit {
-        print("deinit", self)
-    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

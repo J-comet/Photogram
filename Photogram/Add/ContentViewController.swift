@@ -40,10 +40,6 @@ class ContentViewController: BaseViewController {
         )
     }
     
-    deinit {
-        print("deinit", self)
-    }
-    
     @objc func naviBarRightButtonClicked() {
         completionHandler?(textview.text!)
         navigationController?.popViewController(animated: true)
