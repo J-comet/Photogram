@@ -16,7 +16,7 @@ class SearchViewController: BaseViewController {
     
     var images: [UnSplashSearchImageResult] = []
     
-    weak var delegate: PassImageDelegate?
+    var delegate: PassImageDelegate?
     
     override func loadView() {
         self.view = mainView

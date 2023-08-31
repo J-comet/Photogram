@@ -15,7 +15,7 @@ protocol PassDateDelegate {
     func receiveDate(date: Date)
 }
 
-protocol PassImageDelegate: AnyObject {
+protocol PassImageDelegate {
     func receiveImage(image: String)
 }
 

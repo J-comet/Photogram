@@ -143,12 +143,10 @@
 		C01F3A7B2A9C1D5D00285822 /* Photogram */ = {
 			isa = PBXGroup;
 			children = (
-				C01F3BB72AA01A5700285822 /* Home */,
+				C041D4F42AA0DA6D00AF3671 /* View */,
 				C01F3BA42A9F1B2B00285822 /* Model */,
 				C01F3B932A9EC72300285822 /* Network */,
 				C01F3ABC2A9D7BAF00285822 /* Extension */,
-				C01F3A9B2A9C2FC200285822 /* Add */,
-				C01F3A962A9C272C00285822 /* Search */,
 				C01F3A932A9C23E800285822 /* Base */,
 				C01F3A7C2A9C1D5D00285822 /* AppDelegate.swift */,
 				C01F3A7E2A9C1D5D00285822 /* SceneDelegate.swift */,
@@ -246,6 +244,16 @@
 				C01F3BBA2AA01A8C00285822 /* HomeView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C041D4F42AA0DA6D00AF3671 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01F3A962A9C272C00285822 /* Search */,
+				C01F3A9B2A9C2FC200285822 /* Add */,
+				C01F3BB72AA01A5700285822 /* Home */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
