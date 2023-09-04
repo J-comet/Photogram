@@ -57,7 +57,7 @@ class AddViewController: BaseViewController {
         mainView.titleButton.addTarget(self, action: #selector(titleButtonClicked), for: .touchUpInside)
         mainView.contentButton.addTarget(self, action: #selector(contentButtonClicked), for: .touchUpInside)
         
-        //        APIService.shared.callRequest()
+//        APIService.shared.callRequest(query: "sky")
     }
 
     
